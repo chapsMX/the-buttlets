@@ -7,7 +7,7 @@ import {
 import { base } from "wagmi/chains";
 import { coinbaseWallet } from "wagmi/connectors";
 
-const appName = "Clawplets";
+const appName = "The Buttlets";
 
 export function getConfig() {
   return createConfig({
@@ -15,7 +15,7 @@ export function getConfig() {
     connectors: [
       coinbaseWallet({
         appName,
-        preference: "smartWalletOnly",
+        preference: "all",
         version: "4",
       }),
     ],

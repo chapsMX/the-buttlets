@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 import "@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol";
 import "@openzeppelin/contracts/utils/Pausable.sol";
 
-contract Clawplets is ERC721Enumerable, Ownable, Pausable {
+contract TheButtlets is ERC721Enumerable, Ownable, Pausable {
     using ECDSA for bytes32;
 
     // verifier for off-chain signatures authorizing mints
@@ -31,7 +31,7 @@ contract Clawplets is ERC721Enumerable, Ownable, Pausable {
     event IpfsGatewayBaseUpdated(string base);
 
     constructor(address initialOwner)
-        ERC721("Clawplets ", "CLAWPlet")
+        ERC721("TheButtles", "BUTTlet")
         Ownable(initialOwner)
     {
         mintPrice = 0.00037 ether;
@@ -167,11 +167,11 @@ contract Clawplets is ERC721Enumerable, Ownable, Pausable {
             bytes(
                 string(
                     abi.encodePacked(
-                        '{"name":"Clawplet #',
+                        '{"name":"The Buttlet #',
                         _toString(tokenId),
-                        '","description":"Turning Warplets into Clawplets.","image":"',
+                        '","description":"Turning Warplets into Buttlets.","image":"',
                         imgURL,
-                        '","attributes":[{"trait_type":"Collection","value":"Clawplets"}]}'
+                        '","attributes":[{"trait_type":"Collection","value":"The Buttlets"}]}'
                     )
                 )
             )

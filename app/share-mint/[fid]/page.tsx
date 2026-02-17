@@ -93,7 +93,7 @@ export async function generateMetadata({
     version: "next",
     imageUrl: shareImageUrl,
     button: {
-      title: "Mint your Clawplet",
+      title: "Rotate your Warplet to show its Buttlet",
       action: {
         type: "launch_frame",
         name: "Mint",
@@ -106,13 +106,13 @@ export async function generateMetadata({
 
   return {
     metadataBase: new URL(APP_URL),
-    title: `🦞 Clawplet #${fid}`,
-    description: "Mint your own Clawplet based on your Farcaster Warplet 🚀",
+    title: `🍑 Buttlet #${fid}`,
+    description: "Rotate your Warplet to show its Buttlet 🚀",
     openGraph: {
       type: "website",
       url: shareUrl,
-      title: `🦞 Clawplet #${fid}`,
-      description: "Mint your own Clawlet based on your Warplet 🚀",
+      title: `🍑 Buttlet #${fid}`,
+      description: "Rotate your Warplet to show its Buttlet 🚀",
       images: [{ url: shareImageUrl }],
     },
     other: {

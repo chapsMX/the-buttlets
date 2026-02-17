@@ -78,14 +78,14 @@ function resolveContextPfpUrl(user?: MiniKitUserWithLegacyPfp | null) {
 
 const TRANSFORM_MESSAGES = [
   "Collecting your Warplet's DNA... 🧬",
-  "Verifying your Warplet's skin... 🧐",
-  "Adding the yarn... 🧵",
-  "Shaping the crochet stitches... 🪡",
-  "Stuffing it with cozy pixels... 🧸",
-  "Tying the final knot... 🎀",
-  "Giving your Crochet Warplet its soul... ✨",
-  "Taking a cute photo for the blockchain... 📸",
-  "Wrapping up your Crochet Warplet with extra charm... 💖",
+  "Spinning it around to face the other way... 🔄",
+  "Enhancing the rear view... 🍑",
+  "Adding some extra cushion... 🛋️",
+  "Sculpting that signature curve... 🎨",
+  "Making sure it pops... 💥",
+  "Giving your Buttlet its soul... ✨",
+  "Snapping that cheeky blockchain selfie... 📸",
+  "Wrapping up with extra sass... 💅",
   "Almost ready... ⏳",
 ];
 
@@ -249,7 +249,7 @@ export default function Home() {
     return `${VIEW_TOKEN_BASE_URL}/${CONTRACT_ADDRESS}/${tokenId}`;
   }, [mintedTokenId, userFid]);
   // canTransform: user has warplet image, hasn't transformed yet, and not currently transforming
-  // Note: hasMinted refers to the Clawplet NFT, not the original Warplet, so we don't check it here
+  // Note: hasMinted refers to the Buttlet NFT, not the original Warplet, so we don't check it here
   const canTransform =
     Boolean(warpletImage) &&
     !warpletError &&
@@ -282,8 +282,8 @@ export default function Home() {
         notTransformed: warpletStatus === null || !warpletStatus.hasTransformed,
         notTransforming: !isTransforming,
         notLoading: !isStatusLoading,
-        // Note: hasMinted refers to Clawplet NFT, not relevant for transform button
-        hasMintedClawpet: warpletStatus?.hasMinted ?? false,
+        // Note: hasMinted refers to Buttlet NFT, not relevant for transform button
+        hasMintedButtlet: warpletStatus?.hasMinted ?? false,
       },
     });
   }, [warpletStatus, address, transformedCid, canMint, canTransform, userFid, warpletImage, warpletError, isTransforming, isStatusLoading]);
@@ -391,8 +391,8 @@ export default function Home() {
       try {
         const shareUrl = `${shareBaseUrl}/share-mint/${embedFid}`;
         const shareText =
-          `♻️ I just transformed my Warplet into Clawplet #${displayTokenId}\n` +
-          `🦞 Transform and mint yours 🦞\n` +
+          `♻️ I just transformed my Warplet into a Buttlet #${displayTokenId}\n` +
+          `🍑 Transform and mint yours 🍑\n` +
           `Only 0.00037 ETH`;
         console.log("[share] invoking composeCast", {
           displayTokenId,
@@ -443,7 +443,7 @@ export default function Home() {
     setAddMiniAppError(null);
     try {
       await farcasterMiniAppSdk.actions.addMiniApp();
-      console.log("[addMiniApp] User added Clawpets to their apps");
+      console.log("[addMiniApp] User added The Buttlets to their apps");
     } catch (error: unknown) {
       const err = error as { name?: string; message?: string };
       if (err?.name === "RejectedByUser") {
@@ -560,7 +560,7 @@ export default function Home() {
     farcasterMiniAppSdk.actions
       .addMiniApp()
       .then(() => {
-        console.log("[addMiniApp] User added Clawpets to their apps");
+        console.log("[addMiniApp] User added The Buttlets to their apps");
       })
       .catch((error: unknown) => {
         const err = error as { name?: string; message?: string };
@@ -683,9 +683,9 @@ export default function Home() {
           <p style={{ marginTop: 0 }}>Loading Warplet...</p>
         ) : null}
 
-        <h1 className={styles.title} style={{ marginTop: 0 }}>🦞 Clawplets 🦞</h1>
+        <h1 className={styles.title} style={{ marginTop: 0 }}>🍑 The Buttlets 🍑</h1>
         <p style={{ marginTop: 0, textAlign: "center", fontSize: "17px" }}>
-           Transform your Warplet into a Clawplet.</p>
+           Rotate your Warplet to show its Buttlet 🍑.</p>
         {context?.user ? (
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginTop: 0 }}>
             <span style={{ margin: 6 }}>
@@ -727,7 +727,7 @@ export default function Home() {
                   fontSize: 14,
                 }}
               >
-                {isAddingMiniApp ? "Adding…" : "Add Clawpets to my apps"}
+                {isAddingMiniApp ? "Adding…" : "Add The Buttlets to my apps"}
               </button>
               {addMiniAppError ? (
                 <p style={{ margin: "6px 0 0", fontSize: 12, color: "#c00", textAlign: "center" }}>
@@ -765,7 +765,7 @@ export default function Home() {
             </button>
           ) : !warpletStatus?.hasMinted && warpletStatus?.hasTransformed ? (
             <p style={{ margin: 0, fontSize: 14, color: "#2ecc71" }}>
-              Warplet has been transformed into a Clawplet. Proceed to mint!
+              Warplet has been transformed into a Buttlet. Proceed to mint!
             </p>
           ) : null}
           {warpletStatus?.hasMinted && warpletStatus?.hasTransformed ? (
@@ -797,7 +797,7 @@ export default function Home() {
                       textAlign: "center",
                     }}
                   >
-                    View Clawplet on OpenSea
+                    View Buttlet on OpenSea
                   </a>
                 ) : null}
                 <button
@@ -868,7 +868,7 @@ export default function Home() {
                   }
                 }}
               >
-                <TransactionButton text="Mint Clawplet" disabled={!canMint} />
+                <TransactionButton text="Mint Buttlet" disabled={!canMint} />
               </Transaction>
               {mintError ? (
                 <p style={{ color: "red", textAlign: "center", marginTop: 8 }}>{mintError}</p>
@@ -907,8 +907,8 @@ export default function Home() {
               </p>
               <p style={{ marginTop: 8, fontSize: 13, color: "#555" }}>
                 We are transforming your Warplet, it make take a few minutes, be patient.<br />
-                A Warplet can only be transformed once.<br />
-                You can close the app, we will refresh with your Clawplet once it has been transformed.
+                A Warplet can only be rotated once.<br />
+                You can close the app, we will refresh with your Buttlet once it has been rotated.
               </p>
             </div>
           </div>
@@ -1011,7 +1011,7 @@ export default function Home() {
                         fontSize: 14,
                       }}
                     >
-                      View Clawplet on OpenSea
+                      View Buttlet on OpenSea
                     </a>
                   </div>
                 ) : null}
@@ -1058,29 +1058,6 @@ export default function Home() {
     <WalletDropdownDisconnect />
   </WalletDropdown>
 </Wallet>
-{/*           <Wallet>
-            <ConnectWallet
-              disconnectedLabel="Connect wallet"
-              className={styles.connectWalletButton}
-            >
-              <Avatar className={styles.walletAvatar} />
-              <Name className={styles.walletName} />
-            </ConnectWallet>
-            <WalletDropdown>
-              <Identity
-                className={styles.walletIdentity}
-                hasCopyAddressOnClick
-              >
-                <Avatar />
-                <Name />
-                <Address className={styles.walletAddress} />
-              </Identity>
-              <WalletDropdownLink icon="wallet" href="https://keys.coinbase.com">
-                Wallet
-              </WalletDropdownLink>
-              <WalletDropdownDisconnect />
-            </WalletDropdown>
-          </Wallet> */}
         </div>
 
       </div>

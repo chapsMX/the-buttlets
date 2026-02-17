@@ -98,7 +98,7 @@ export async function GET(
             justifyContent: "center",
           },
         },
-        `Clawplet #${fid}!`
+        `Buttlet #${fid}!`
       ),
       React.createElement(
         "div",
@@ -137,7 +137,7 @@ export async function GET(
         ),
         React.createElement("img", {
           src: warpletImageSrc,
-          alt: `Clawplet ${fid}`,
+          alt: `Buttlet ${fid}`,
           width: 400,
           height: 400,
           style: {

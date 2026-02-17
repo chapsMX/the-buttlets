@@ -1,6 +1,6 @@
-## 🦞 Clawlets 🦞
+## 🍑 The Buttlets 🍑
 
-🦞 Clawplets 🦞 is a Farcaster Mini App that lets every user reinterpret their Warplet (NFT bound 1:1 to their fid) using AI, upload the new image to IPFS (Pinata), and mint it on Base. Current capabilities:
+🍑 The Buttlets 🍑 is a Farcaster Mini App that lets every user reinterpret their Warplet (NFT bound 1:1 to their fid) using AI, upload the new image to IPFS (Pinata), and mint it on Base. Current capabilities:
 
 - Automatically detect whether the visiting fid already owns the original Warplet.
 - Display the Warplet image plus basic profile info (username, pfp, fid).
