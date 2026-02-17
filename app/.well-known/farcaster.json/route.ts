@@ -28,7 +28,7 @@ export async function GET() {
         splashBackgroundColor: "#e9ca71",
         buttonTitle: "Transform your Warplet -> 🍑",
         homeUrl: URL,
-        webhookUrl: `https://api.neynar.com/f/app/8bd3ba67-b0fb-488e-a7a2-aa98bffde018/event`,
+        webhookUrl: `https://api.neynar.com/f/app/0d58bc7c-a0ae-4d7d-8378-6c1b22c3aac1/event`,
         primaryCategory: "social",
         tags: [`warplet`, `pfp`, `farcaster`, `Buttlet`, `OpenClaw`],
         screenshotUrls: [
