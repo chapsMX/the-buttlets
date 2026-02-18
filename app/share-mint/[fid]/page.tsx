@@ -106,13 +106,13 @@ export async function generateMetadata({
 
   return {
     metadataBase: new URL(APP_URL),
-    title: `Buttlet #${fid}`,
-    description: "Rotate your Warplet to show its Buttlet 🚀",
+    title: `🍑 Buttlet #${fid}`,
+    description: "Rotate your Warplet to show its Buttlet",
     openGraph: {
       type: "website",
       url: shareUrl,
-      title: `Buttlet #${fid}`,
-      description: "Rotate your Warplet to show its Buttlet 🚀",
+      title: `🍑 Buttlet #${fid}`,
+      description: "Rotate your Warplet to show its Buttlet",
       images: [{ url: shareImageUrl }],
     },
     other: {
