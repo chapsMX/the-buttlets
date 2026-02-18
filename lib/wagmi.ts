@@ -11,7 +11,7 @@ import { Attribution } from "ox/erc8021";
 const appName = "The Buttlets";
 
 // Builder Code from base.dev > Settings > Builder Code — attributes onchain activity
-const DATA_SUFFIX = Attribution.toDataSuffix({
+export const DATA_SUFFIX = Attribution.toDataSuffix({
   codes: ["bc_r3vf5o3d"],
 });
 

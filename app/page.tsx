@@ -1,9 +1,10 @@
 "use client";
 import { useEffect, useState, useMemo, useCallback, useRef } from "react";
 import { sdk as farcasterMiniAppSdk } from "@farcaster/miniapp-sdk";
-import { encodeFunctionData, parseAbi, parseEther } from "viem";
+import { concat, encodeFunctionData, parseAbi, parseEther } from "viem";
 import { useAccount } from "wagmi";
 import { Transaction, TransactionButton } from "@coinbase/onchainkit/transaction";
+import { DATA_SUFFIX } from "@/lib/wagmi";
 import {
   Wallet,
   ConnectWallet,
@@ -322,11 +323,13 @@ export default function Home() {
       const abi = parseAbi([
         "function mint(uint256 fid, string cid, uint256 deadline, bytes signature) payable",
       ]);
-      const data = encodeFunctionData({
+      const encodedData = encodeFunctionData({
         abi,
         functionName: "mint",
         args: [BigInt(fid), transformedCid, BigInt(deadline), signature as `0x${string}`],
       });
+      // Append Builder Code for Base attribution (ERC-8021)
+      const data = concat([encodedData, DATA_SUFFIX]);
       setMintedTokenId(fid);
       setMintedImageUrl(previewImageUrl);
       return [
