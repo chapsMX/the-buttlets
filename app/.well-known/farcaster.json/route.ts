@@ -11,8 +11,8 @@ export async function GET() {
     return Response.json({
       accountAssociation: {
       "header": "eyJmaWQiOjIwNzAxLCJ0eXBlIjoiY3VzdG9keSIsImtleSI6IjB4ZDQwNDg2MjIwNDMzOWJCNDJDNWMzNTVjMzcxMWViYzE2MTM1ZjllZSJ9",
-      "payload": "eyJkb21haW4iOiJjbGF3cGxldHMubWluaWFwcHMuem9uZSJ9",
-      "signature": "/geYZrFm/5Dx66dHqlClAGG8nXmTyKr87jNaiQhXx+osPgvKy3J3Mfe2+vxUow8cuky2s8wE5R4tTUWS6SKe5xs=",
+      "payload": "eyJkb21haW4iOiJ0aGVidXR0bGV0cy5taW5pYXBwcy56b25lIn0",
+      "signature": "2t/LzX7cdTFP8RDx7jEnoKR6lyvgZ1kp/SLfN7obQ+MB6Vt/WYPLoYNJWRP1TOIoG3GkBhLKPqYhzAhKA9lytRs=",
       },
       baseBuilder: {
         ownerAddress: "0x58F521068A39a5e675ACc7Edd7E269f576867691",
