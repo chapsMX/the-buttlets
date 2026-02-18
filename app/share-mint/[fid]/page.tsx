@@ -93,7 +93,7 @@ export async function generateMetadata({
     version: "next",
     imageUrl: shareImageUrl,
     button: {
-      title: "Rotate your Warplet to show its Buttlet",
+      title: "Show your Warplet as a Buttlet",
       action: {
         type: "launch_frame",
         name: "Mint",
