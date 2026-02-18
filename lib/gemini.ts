@@ -16,7 +16,11 @@ const ai = new GoogleGenAI({ apiKey: API_KEY });
 // const YARN_PROMPT = `crea una reinterpretación del warplet, el personaje principal de la imagen, en el que en lugar de brazos tenga tenazas de langosta, cambia los pies por patas de langosta y agrega una cola y antenas de langosta. manten el tamaño, formato, colores y estilo de la imagen original.`;
 // crochet warplet prompt
 // const YARN_PROMPT = `Realiza una reinterpretación de la imagen proporcionada en una figura 3d de estambre hecha a mano tipo crochet, deberás respetar los rasgos, caracteristica física, colores, accesorios, tamaño y postura de la imagen original. La imagen final deberá ser realista, como si se tratara de una fotografía, elaborada en estambre grueso tejido en crochet y sin ningun tipo de contorno o linea que la defina para garantizar que se vea como una figura 3d heca de estambre, la escala de la imagen siempre sera 1:1`;
-const YARN_PROMPT = `gira al personaje de la imagen para que lo veamos de espalda, ponle un trasero grande y esponjoso y respeta sus principales atributos como colores, rasgos, caracteristicas fisica, accesorios, tamaño, el nuevo personaje puede estar en un apostura diferente pero respetando las caracteristicas del original. la proporcion de la imagen siempre sera 1:1`;
+const YARN_PROMPT = `Rotate the provided Warplet character to a full back view (180° turn), showing the character from behind.
+The back view must clearly show a large, rounded, fluffy buttocks in a playful, cartoonish, non-sexual way, consistent with the original character design.
+If the character is wearing clothing, do not remove it — simply define and emphasize the buttocks shape naturally through the clothing.
+Preserve the original cartoon illustration style, proportions, line work, shading, and color palette.
+The output image proportion must always be 1:1.`;
 export async function generateYarnImageFromPart(
   imagePart: Part 
 ): Promise<{ data: string; mimeType: string }> {
