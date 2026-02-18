@@ -48,7 +48,7 @@ export async function generateYarnImageFromPart(
       };
     }
   }
-  throw new Error("Gemini did not return an image payload");
+  throw new Error("Gemini did not return an image payload, please try again. If error persists contact @chaps.");
 }
 
 export async function generateYarnImageFromBuffer(
