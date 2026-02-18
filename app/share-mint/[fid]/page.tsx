@@ -111,8 +111,8 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       url: shareUrl,
-      title: `🍑 Buttlet #${fid}`,
-      description: "Rotate your Warplet to show its Buttlet",
+      title: `Buttlet #${fid}`,
+      description: "Show your Warplet as a Buttlet",
       images: [{ url: shareImageUrl }],
     },
     other: {
