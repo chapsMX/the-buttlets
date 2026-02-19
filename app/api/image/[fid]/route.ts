@@ -161,7 +161,7 @@ export async function GET(
             justifyContent: "center",
           },
         },
-        `Transform and mint your warplet!`
+        `Rotate and mint a Buttlet 🍑`
       )
     );
 
