@@ -133,7 +133,7 @@ export async function GET(
               color: "#ffffff",
             },
           },
-          ">>>"
+          "> 🍑 >"
         ),
         React.createElement("img", {
           src: warpletImageSrc,
